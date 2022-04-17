@@ -24,8 +24,6 @@
                         </li>
                     </ul>
                 </div>
-@if (Context.User.Identity.IsAuthenticated)
-{
                  <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -33,9 +31,6 @@
                         </li>
                     </ul>
                     </div>
-                } 
-                else
-                {
                     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -43,7 +38,6 @@
                         </li>
                     </ul>
                     </div>
-                }
             </div>
         </nav>
     </header>

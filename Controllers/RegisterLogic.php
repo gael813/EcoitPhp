@@ -29,21 +29,21 @@
                             'email' => $email,
                             'password' => $password
                         ));
-                        header('Location:Register.php?reg_err=success');
+                        header('Location:../Views/Register.php?reg_err=success');
                     }
                  }
                  else
                  {
-                    header('Location: Register.php?reg_err=email_length');
+                    header('Location: ../Views/Register.php?reg_err=email_length');
                  }
              }
              else
              {
-                 header('Location: Register.php?reg_err=pseudo_length');
+                 header('Location: ../Views/Register.php?reg_err=pseudo_length');
              }
         }
         else
         {
-            header('Location: Register.php?reg_err=already');
+            header('Location: ../Views/Register.php?reg_err=already');
         }
     }

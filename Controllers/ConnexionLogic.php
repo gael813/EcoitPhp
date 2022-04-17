@@ -8,9 +8,9 @@
         $email = htmlspecialchars($_POST['email']);
         $password = htmlspecialchars($_POST['password']);
 
-        $check = $bdd->prepare('SELECT pseudo, email, password FROM User WHERE email = ?');
+        $check = $bdd->prepare('SELECT pseudo, email, password FROM users WHERE email = ?');
         $check->execute(array($email));
-        $data = $check->fetch();
+        $data = $check->fetch();        
         $row = $check->rowCount();
 
         if($row == 1)
@@ -22,24 +22,20 @@
                 if($data['password'] === $password)
                 {
                     $_SESSION['user'] = $data['pseudo'];
-                    header('Location:Catalog.php');
+                    header('Location:../Views/Catalog.php');
                 }
                 else
                 {
-                    header('Location:index.php.login_err=password');
+                    header('Location:../Views/Connexion.php?login_err=password');
                 }
             }
             else
             {
-                header('Location:index.php?login_err=email');
+                header('Location:../Views/Connexion.php?login_err=email');
             }
         }
         else
         {
-            header('Location:index.php?login_err=already');
+            header('Location:../Views/Connexion.php?login_err=already');
         }
-    }
-    else
-    {
-        header('Location:index.php');
     }
