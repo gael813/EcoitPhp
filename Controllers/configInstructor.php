@@ -11,11 +11,13 @@
         
 
         //Create users table
-        $form = "CREATE TABLE users(
+        $form = "CREATE TABLE instructors(
             id INT AUTO_INCREMENT PRIMARY KEY,
-            email VARCHAR(100),
-            pseudo VARCHAR(100),
-            password VARCHAR(100))";
+            lastName VARCHAR(100),
+            firstName VARCHAR(100),
+            password VARCHAR(100),
+            description VARCHAR(500),
+            file VARCHAR(200)";
 
         $bdd->exec($form);
     }

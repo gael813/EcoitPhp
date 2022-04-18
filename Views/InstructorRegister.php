@@ -22,19 +22,19 @@
     <div class="modal-dialog" role="log">
         <div class="modal-content rounded-5 shadow">
             <div class="modal-body p-5 pt-0 mt-5">
-                <form class="" method="post"> 
+                <form class="" action="..\Controllers\RegisterLogicInstructor.php" method="post"> 
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control rounded-4" name="email" id="floatingInput"
                             placeholder="name@example.com">
                         <label for="floatingInput">Adresse Email</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control rounded-4" name="name" id="floatingInput"
+                        <input type="text" class="form-control rounded-4" name="lastName" id="floatingInput"
                             placeholder="Doe">
                         <label for="floatingInput">Nom</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control rounded-4" name="name" id="floatingInput"
+                        <input type="text" class="form-control rounded-4" name="firstName" id="floatingInput"
                             placeholder="John">
                         <label for="floatingInput">Prénom</label>
                     </div>

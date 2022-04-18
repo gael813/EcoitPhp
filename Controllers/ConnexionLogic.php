@@ -1,5 +1,4 @@
 <?php 
-
     session_start();
     require_once('Config.php');
 
@@ -8,7 +7,8 @@
         $email = htmlspecialchars($_POST['email']);
         $password = htmlspecialchars($_POST['password']);
 
-        $check = $bdd->prepare('SELECT pseudo, email, password FROM users WHERE email = ?');
+        // Check if users exist in database
+        $check = $bdd->prepare('SELECT pseudo, email, password FROM users');
         $check->execute(array($email));
         $data = $check->fetch();        
         $row = $check->rowCount();

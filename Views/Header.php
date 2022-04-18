@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+    
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -24,20 +26,27 @@
                         </li>
                     </ul>
                 </div>
+                <?php if(isset($_SESSION['user']))
+                { ?> 
                  <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page-handler="Logout" asp-page="Index">Se déconnecter</a>
+                            <a class="nav-link text-dark" href="../index.php">Se déconnecter</a>
                         </li>
                     </ul>
-                    </div>
-                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                </div>
+                 <?php 
+                } 
+                else 
+                { ?>   
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page-handler="Login" asp-page="/Index">Se connecter</a>
+                            <a class="nav-link text-dark" href="index.php">Se connecter</a>
                         </li>
                     </ul>
-                    </div>
+                </div>
+                <?php } ?>
             </div>
         </nav>
     </header>
