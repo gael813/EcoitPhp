@@ -1,5 +1,5 @@
 <?php
-    require_once('configInstructor.php');
+    require_once('Config.php');
 
     if(isset($_POST['email']) && isset($_POST['lastName']) && isset($_POST['firstName']) && isset($_POST['password']) && isset($_POST['description']) && isset($_POST['file']))
     {
@@ -10,7 +10,7 @@
         $description = htmlspecialchars($_POST['description']);
         $file = htmlspecialchars($_POST['file']);
 
-        $check = $bdd->prepare('SELECT email, lastName, firstName, password, description, file FROM users WHERE email = ?');
+        $check = $bdd->prepare('SELECT email, lastName, firstName, password, description, file, statut FROM users WHERE email = ?');
         $check->execute(array($email));
         $data = $check->fetch();
         $row = $check->rowCount();
@@ -27,14 +27,15 @@
                         {
                             $password = hash('sha256', $password);
 
-                            $insert = $bdd->prepare('INSERT INTO users(email, lastName, firstName, password, description, file) VALUES (:email, :lastName, :firstName, :password, :description, :file)');
+                            $insert = $bdd->prepare('INSERT INTO users(email, lastName, firstName, password, description, file, statut) VALUES (:email, :lastName, :firstName, :password, :description, :file, :statut)');
                             $insert->execute(array(
                                 'email' => $email,
                                 'lastName' => $lastName,
                                 'firstName' => $firstName,
                                 'password' => $password,
                                 'description' => $description,
-                                'file' => $file
+                                'file' => $file,
+                                'statut' => 2
                             ));
                             header('Location:../Views/Register.php?reg_err=success');
                         }

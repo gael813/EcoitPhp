@@ -14,7 +14,7 @@
     <title>ECOIT</title>
 </head>
 
-<body>
+<body class="container">
         <!-- Search Catalog -->
 
         <form class="form-inline mt-2 text-center d-flex justify-content-center">
@@ -34,7 +34,7 @@
             </div>
         </form>
         <!-- Catalog -->
-        <div class="container row d-flex text-center justify-content-center mt-5">
+        <div class="row text-center d-flex justify-content-center mt-5">
             <div class="card m-4 divCard" id="divStart" style="width: 18rem;">
                 <!-- <img src="..." class="card-img-top" alt="...">-->
                 <div class="card-body">
@@ -47,7 +47,7 @@
             <div class="card m-4 divCard" id="divProgress" style="width: 18rem;">
                 <!--<img src="..." class="card-img-top" alt="...">-->
                 <div class="card-body">
-                    <h5 class="card-title">test2</h5>
+                    <h5 class="card-title">ecologie test</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
                     <a href="#" class="btn btn-warning">En cours</a>
@@ -56,7 +56,7 @@
             <div class="card m-4 divCard" id="divStart" style="width: 18rem;">
                 <!--<img src="..." class="card-img-top" alt="...">-->
                 <div class="card-body">
-                    <h5 class="card-title">test3</h5>
+                    <h5 class="card-title">recherche test</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
                     <a href="#" class="btn btn-primary">Commencer le cours</a>
@@ -65,7 +65,7 @@
             <div class="card m-4 divCard" id="divEnd" style="width: 18rem;">
                 <!--<img src="..." class="card-img-top" alt="...">-->
                 <div class="card-body">
-                    <h5 class="card-title">test4</h5>
+                    <h5 class="card-title">un autre test</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
                     <a href="#" class="btn btn-success" onclick="endFormation()">Terminée</a>
@@ -74,7 +74,7 @@
             <div class="card m-4 divCard" id="divStart" style="width: 18rem;">
                 <!--<img src="..." class="card-img-top" alt="...">-->
                 <div class="card-body">
-                    <h5 class="card-title">test5</h5>
+                    <h5 class="card-title">encore un</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
                         card's content.</p>
                     <a href="#" class="btn btn-primary">Commencer le cours</a>

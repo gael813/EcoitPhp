@@ -12,7 +12,6 @@
         $check->execute(array($email));
         $data = $check->fetch();        
         $row = $check->rowCount();
-
         if($row == 1)
         {
             if(filter_var($email, FILTER_VALIDATE_EMAIL))
@@ -21,8 +20,8 @@
                 
                 if($data['password'] === $password)
                 {
-                    $_SESSION['user'] = $data['pseudo'];
-                    header('Location:../Views/Catalog.php');
+                    $_SESSION['user'] = $data['email'];
+                    header('Location: ..\Views\Catalog.php');
                 }
                 else
                 {

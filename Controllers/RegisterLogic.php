@@ -8,7 +8,7 @@
         $email = htmlspecialchars($_POST['email']);
         $password = htmlspecialchars($_POST['password']);
 
-        $check = $bdd->prepare('SELECT pseudo, email, password FROM users WHERE email = ?');
+        $check = $bdd->prepare('SELECT pseudo, email, password, statut FROM users WHERE email = ?');
         $check->execute(array($email));
         $data = $check->fetch();
         $row = $check->rowCount();
@@ -23,11 +23,12 @@
                     {
                         $password = hash('sha256', $password);
 
-                        $insert = $bdd->prepare('INSERT INTO users(pseudo, email, password) VALUES (:pseudo, :email, :password)');
+                        $insert = $bdd->prepare('INSERT INTO users(pseudo, email, password, statut) VALUES (:pseudo, :email, :password, :statut)');
                         $insert->execute(array(
                             'pseudo' => $pseudo,
                             'email' => $email,
-                            'password' => $password
+                            'password' => $password,
+                            'statut' => 1
                         ));
                         header('Location:../Views/Register.php?reg_err=success');
                     }

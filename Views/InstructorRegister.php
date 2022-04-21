@@ -50,8 +50,8 @@
                     </div>
                     <div class="form-floating mb-3">
                         <p>Photo de profil</p>
-                        <input type="file" class="form-control rounded-4" name="file" id="floatingInput"
-                            placeholder="Photo">
+                        <input type="url" class="form-control rounded-4" name="file" id="floatingInput"
+                            placeholder="https://example.com" pattern="https://.*">
                     </div>
                     <div class="col text-center">
                         <button class="w-50 mb-2 mt-5 btn rounded-4 btn-primary col text-center" type="submit">S'inscrire</button>
